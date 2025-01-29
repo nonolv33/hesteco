@@ -457,7 +457,7 @@ img[src$=".gif"], img[src$=".png"] {
     -ms-interpolation-mode: nearest-neighbor;
 }
 body>header {
-    background: linear-gradient(to right, #60a7dc 0%, #eff0f4 50%); /* Dégradé de gauche à droite */
+    background: linear-gradient(to right, #60a7dc 0%, #eff0f4 20%); /* Dégradé de gauche à droite */
     height: 110px;
     border-bottom: 2px solid #ffffff00;
     word-spacing: 10px;
@@ -625,7 +625,7 @@ button[type="submit"].btn-border:hover, button[type="submit"].btn-border:focus {
     margin-top: -35px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-image: url("../images/1.png");
+    background-image: url("../images//1.png");
     background-size: 240px 140px;
     transition:.5s;
 }
@@ -640,7 +640,7 @@ button[type="submit"].btn-border:hover, button[type="submit"].btn-border:focus {
     margin-top: -24px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-image: url("../images/2.png");
+    background-image: url("../images/madeleine.jpg");
     background-size: 202px 98px;
     transition:.5s;
 }
@@ -1019,6 +1019,7 @@ section:nth-child(4) {
 }
 section:last-child {
     padding-bottom: 4em;
+    background: linear-gradient(to right, #60a7dc 0%, #eff0f4 90%); /* Dégradé de gauche à droite */
 }
 .call-to-action {
     margin-top: 6em;
@@ -1594,12 +1595,12 @@ transition: all 0.2s ease;
     display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
     justify-content: center; /* Assure un espacement égal entre les cercles */
     align-items: center; /* Aligne les cercles verticalement au centre */
-    gap: 300px; /* Réduit l'espacement entre les cercles */
+    gap: 330px; /* Réduit l'espacement entre les cercles */
   }
   
   .circle, .circle2 {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-color: #ffffff00; /* Couleur de fond du cercle */
     border-radius: 50%; /* Pour rendre l'élément circulaire */
     border: 5px solid #60a7dc; /* Contour du cercle */
@@ -1615,8 +1616,8 @@ transition: all 0.2s ease;
   }
   
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
   }
   
@@ -1631,3 +1632,30 @@ transition: all 0.2s ease;
     text-transform: uppercase; /* Texte en majuscules */
     text-align: center;
 }
+
+.partenaires {
+    text-align: center;
+}
+
+.separator {
+    width: 50%;
+    margin: 10px auto 30px; /* Centrer le trait de séparation */
+}
+
+.logos {
+    display: flex;
+    justify-content: center; /* Alignement des logos */
+    gap: 30px; /* Espacement entre les logos */
+    flex-wrap: wrap; /* Permet de passer à la ligne si besoin */
+}
+
+.logo img {
+    width: 150px; /* Ajuste la taille des logos */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Effet zoom au survol */
+}
+
