@@ -1304,7 +1304,7 @@ h2 {
     height: auto;
     padding:15px;
     color:#fff;
-    background:rgba(44, 111, 119, 1);
+    background:#60a7dc; /* Changer la couleur du contour en bleu lors du survol */
     border:none;
     outline: none;
     -webkit-transition: all 0.3s;
@@ -1321,7 +1321,7 @@ h2 {
   }
 
   .form-btn:hover{
-    background: #BFA55E;
+    background: #81b7e1;
     color: white;
     border:none;
   }
