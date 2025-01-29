@@ -1045,7 +1045,7 @@ section:last-child {
     font-family: "Merriweather";
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     word-spacing: 4px;
     letter-spacing: .8px;
@@ -1378,6 +1378,7 @@ transition: all 0.2s ease;
         opacity: 0; /* Texte invisible */
         transition: all 0.2s ease;
         pointer-events: none; /* Empêche d'interagir avec le texte */
+        text-transform: uppercase; /* Texte en majuscules */
     }
 
     .z-hover:hover img {
@@ -1587,4 +1588,46 @@ transition: all 0.2s ease;
         float: none;
         margin-top: 15px;
     }
+}
+
+.circle-container {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
+    justify-content: center; /* Assure un espacement égal entre les cercles */
+    align-items: center; /* Aligne les cercles verticalement au centre */
+    gap: 300px; /* Réduit l'espacement entre les cercles */
+  }
+  
+  .circle, .circle2 {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff00; /* Couleur de fond du cercle */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    border: 5px solid #60a7dc; /* Contour du cercle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .circle:hover, .circle2:hover {
+    transform: scale(1.1); /* Agrandir le cercle au survol */
+    border-color: #60a7dc; /* Changer la couleur du contour en bleu lors du survol */
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .text-below {
+    position: absolute; /* Position précise */
+    top: 3400px; /* Ajustez la position verticale */
+    left: 30%; /* Ajustez la position horizontale */
+    transform: translateX(-50%); /* Centre horizontalement par défaut */
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Couleur du texte */
+    text-transform: uppercase; /* Texte en majuscules */
+    text-align: center;
 }
