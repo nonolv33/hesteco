@@ -197,8 +197,10 @@ body {
     color: #1c1c1c;
 }
 p {
-    text-transform: none;
+    font-family: 'Nunito', sans-serif; /* Application de la police Nunito */
+    text-transform: none; 
 }
+
 h2.vertical-center{
     padding-top: 400px;
     font-size: 100px;
@@ -1043,7 +1045,7 @@ section:last-child {
 
 
 .lead-creative-banner {
-    font-family: "Merriweather";
+    font-family: "Nunito";
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -1598,7 +1600,7 @@ transition: all 0.2s ease;
     gap: 330px; /* Réduit l'espacement entre les cercles */
   }
   
-  @media screen and (max-width: 768px) { /* Pour les écrans mobiles */
+ 
   .circle, .circle2 {
     width: 250px;
     height: 250px;
@@ -1609,7 +1611,7 @@ transition: all 0.2s ease;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, border-color 0.3s ease;
-  }}
+  }
   
   .circle:hover, .circle2:hover {
     transform: scale(1.1); /* Agrandir le cercle au survol */
@@ -1660,3 +1662,79 @@ transition: all 0.2s ease;
     transform: scale(1.1); /* Effet zoom au survol */
 }
 
+
+
+
+
+/* Media Queries pour les petits écrans mobiles */
+@media screen and (max-width: 768px) {
+    /* Adapter le container pour un affichage vertical en mobile */
+    .circle-container {
+      flex-direction: column; /* Afficher les cercles verticalement */
+      gap: 20px; /* Réduit l'espacement entre les cercles */
+      margin-top: 20px; /* Un peu de marge en haut */
+    }
+  
+    /* Ajuster la taille des cercles */
+    .circle, .circle2 {
+      width: 150px; /* Taille réduite pour mobile */
+      height: 150px;
+      border: 3px solid #60a7dc; /* Réduction de l'épaisseur du bord */
+    }
+  
+    /* Réduire la taille de l'icône */
+    .icon {
+      width: 100px; /* Taille plus petite pour les icônes sur mobile */
+      height: 100px;
+    }
+  
+    /* Réduire la taille du texte sous chaque icône */
+    .text-below {
+      font-size: 14px; /* Taille plus petite */
+      top: 150px; /* Ajuste la position verticale pour le texte */
+    }
+  
+ 
+  
+    .logo img {
+      width: 100px; /* Réduire la taille des logos */
+    }
+  }
+  
+
+  /* Pour les petits écrans mobiles */
+@media screen and (max-width: 768px) {
+
+    .z-hover {
+        width: 100%; /* Occupe toute la largeur de l'écran */
+        height: 250px; /* Ajuste la hauteur pour un affichage plus adapté */
+        border-radius: 10px; /* Réduit légèrement le rayon des bords pour plus de fluidité sur mobile */
+    }
+
+    /* Image avec effet */
+    .z-hover img {
+        object-fit: cover; /* Garde l'image couvrante même avec des dimensions ajustées */
+    }
+
+    /* Effet de survol sur mobile */
+    .z-hover:hover {
+        transform: scale(1); /* Désactive l'effet de zoom pour éviter un effet trop grand sur les petits écrans */
+        box-shadow: none; /* Pas d'ombre sur mobile pour garder un affichage plus simple */
+    }
+
+    /* Texte caché par défaut */
+    .z-hover .hover-text {
+        font-size: 16px; /* Réduit la taille du texte sur mobile */
+    }
+}
+
+/* Pour les petits écrans mobiles */
+@media screen and (max-width: 768px) {
+    .lead-creative-banner {
+        font-size: 14px; /* Réduit la taille du texte pour un meilleur affichage sur mobile */
+        line-height: 40px; /* Ajuste la hauteur de ligne pour l'adaptation mobile */
+        padding: 0 20px; /* Ajoute de l'espace sur les côtés pour éviter que le texte ne touche les bords */
+        margin: 0 auto; /* Centrer horizontalement le texte */
+        width: 90%; /* Limite la largeur du texte pour une meilleure lisibilité */
+    }
+}
