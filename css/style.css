@@ -1738,3 +1738,45 @@ transition: all 0.2s ease;
         width: 90%; /* Limite la largeur du texte pour une meilleure lisibilité */
     }
 }
+/* Par défaut, cacher le menu mobile */
+.navbar-right {
+    display: none; /* Masquer le menu par défaut sur mobile */
+}
+
+/* Le menu est affiché quand il a la classe 'active' */
+.navbar-right.active {
+    display: block; /* Afficher le menu quand la classe 'active' est ajoutée */
+}
+
+/* Afficher le bouton du menu sur mobile */
+.menu-toggle {
+    display: block; /* Affiche le bouton pour le menu */
+    background-color: #33333300;
+    color: #000000;
+    padding: 9px;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute; /* Utilise la position absolue pour pouvoir le placer à droite */
+    top: 10px; /* Positionne le bouton 10px depuis le haut */
+    right: 10px; /* Positionne le bouton 10px depuis la droite */
+    z-index: 1000; /* S'assure que le bouton est au-dessus des autres éléments */
+}
+
+
+
+
+
+
+
+
+/* Masquer le bouton de menu et afficher le menu sur les grands écrans */
+@media (min-width: 768px) {
+    .navbar-right {
+        display: block; /* Menu visible sur grand écran */
+    }
+
+    .menu-toggle {
+        display: none; /* Masque le bouton sur grand écran */
+    }
+}
