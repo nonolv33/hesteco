@@ -1598,6 +1598,7 @@ transition: all 0.2s ease;
     gap: 330px; /* Réduit l'espacement entre les cercles */
   }
   
+  @media screen and (max-width: 768px) { /* Pour les écrans mobiles */
   .circle, .circle2 {
     width: 250px;
     height: 250px;
@@ -1608,7 +1609,7 @@ transition: all 0.2s ease;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, border-color 0.3s ease;
-  }
+  }}
   
   .circle:hover, .circle2:hover {
     transform: scale(1.1); /* Agrandir le cercle au survol */
